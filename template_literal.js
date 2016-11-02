@@ -51,3 +51,19 @@ get`http://example.com/foo?bar=${bar + baz}&quux=${quux}`
 
 ECMAScript 5:
 get([ "http://example.com/foo?bar=", "&quux=", "" ],bar + baz, quux);
+
+
+3. Raw String Access
+Access the raw template string content (backslashes are not interpreted).
+
+function quux (strings, ...values) {
+    strings[0] === "foo\n"
+    strings[1] === "bar"
+    strings.raw[0] === "foo\\n"
+    strings.raw[1] === "bar"
+    values[0] === 42
+}
+
+quux `foo\n${ 42 }bar`
+
+String.raw `foo\n${ 42 }bar` === "foo\\n42bar"
