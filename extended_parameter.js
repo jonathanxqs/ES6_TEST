@@ -22,7 +22,10 @@ function f (x, y, ...a) {
 console.log( f(1, 2, "hello", true, 7) )  // 9
 
 
-
+/*
+Spread Operator
+Spreading of elements of an iterable collection (like an array or even a string) into both literal elements and individual function parameters.
+*/
 
 var params = [ "hello", true, 7 ]
 var other = [ 1, 2, ...params ] // [ 1, 2, "hello", true, 7 ]
