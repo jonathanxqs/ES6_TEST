@@ -45,11 +45,15 @@ func();
 
 */
 
+
 /*
 
 闭包
 
 JavaScript对闭包的支持允许回调函数在执行时访问其外部的上下文，上下文在声明回调的函数弹出调用栈后仍然有效。考虑下面的例子：
+
+*/
+
 
 function say_hello() {
     var name = "programmer";
@@ -59,7 +63,10 @@ function say_hello() {
     };
     setTimeout(say_hello_again, 1000);
 }
+
 say_hello();
+
+/*
 在这个例子中，say_hello函数被执行时定义了变量name。之后setTimeout函数被执行，约1000毫秒后，绑定了say_hello_again回调的消息入队。之后say_hello函数返回，栈帧弹出结束第一个消息的处理，但name变量仍然可以通过闭包被引用，而不是被垃圾回收。当第二个消息被处理(say_hello_again回调)，它保持了对在外部函数上下文中声明的name变量的访问。一旦回调函数执行结束，header变量可以被垃圾回收。
 
 执行结果：
