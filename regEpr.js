@@ -11,6 +11,7 @@ let parser = (input, match) => {
         for (let i = 0; i < match.length; i++) {
             match[i].pattern.lastIndex = pos
             let found
+            
             if ((found = match[i].pattern.exec(input)) !== null) {
                 match[i].action(found)
                 pos = match[i].pattern.lastIndex
@@ -23,6 +24,7 @@ let parser = (input, match) => {
 let report = (match) => {
     console.log(JSON.stringify(match))
 }
+
 parser("Foo 1 Bar 7 Baz 42", [
     { pattern: /^Foo\s+(\d+)/y, action: (match) => report(match) },
     { pattern: /^Bar\s+(\d+)/y, action: (match) => report(match) },
