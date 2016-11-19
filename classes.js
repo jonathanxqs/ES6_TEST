@@ -1,7 +1,8 @@
 class SkinnedMesh extends THREE.Mesh {//使用extends来表示继承
   
   constructor(geometry, materials) {
-    super(geometry, materials);//父类的构造函数
+
+    super(geometry, materials);//父类的构造函数  Three.Mesh constructor
 
     this.idMatrix = SkinnedMesh.defaultMatrix();
     this.bones = [];
@@ -22,4 +23,5 @@ class SkinnedMesh extends THREE.Mesh {//使用extends来表示继承
   static defaultMatrix() {//静态方法
     return new THREE.Matrix4();
   }
+  
 }
