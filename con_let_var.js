@@ -51,10 +51,13 @@ console.log('c: '+c);
 }
 console.log('c: '+c);  // diff c
 
+
+let t = new Date();
+console.log("当前时间:", t);  // 引用错误（ReferenceError）
+
 function update() {
 
-  let t = readTachymeter();
-  console.log("当前时间:", t);  // 引用错误（ReferenceError）
+  
   
   
 }
