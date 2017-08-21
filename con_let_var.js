@@ -45,5 +45,16 @@ console.log('b: '+b);
 var c=1;
 var c=2;
 console.log('c: '+c);
-c=3;
+{ 
+let c=3;  // can't use let 
 console.log('c: '+c);
+}
+console.log('c: '+c);  // diff c
+
+function update() {
+
+  let t = readTachymeter();
+  console.log("当前时间:", t);  // 引用错误（ReferenceError）
+  
+  
+}
