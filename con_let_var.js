@@ -55,9 +55,8 @@ console.log('c: '+c);  // diff c
 let t = new Date();
 console.log("当前时间:", t);  // 引用错误（ReferenceError）
 
-function update() {
+const MAX_CAT_SIZE_KG = t; // 正确
+console.log("last time:", MAX_CAT_SIZE_KG);
 
-  
-  
-  
-}
+// MAX_CAT_SIZE_KG = t; // 语法错误（SyntaxError）
+// MAX_CAT_SIZE_KG++; // 虽然换了一种方式，但仍然会导致语法错误
