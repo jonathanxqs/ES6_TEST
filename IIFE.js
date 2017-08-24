@@ -14,18 +14,18 @@ http://www.jb51.net/article/50967.htm
 
  
 var fnName=function(){
-  alert('Hello World');
-}();
+  console.log('Hello World');
+}(undefined);
 //函数表达式后面加括号，当javascript引擎解析到此处时能立即调用函数
 
 function fnName(){
-  alert('Hello World');
-}();
+  console.log('Hello World 2 ');
+}(undefined);
 //不会报错，但是javascript引擎只解析函数声明，忽略后面的括号，函数声明不会被调用
 
-function(){
-  console.log('Hello World');  
-}();
+(function(){
+  console.log('Hello World 3');  
+}()) ;
 //语法错误，虽然匿名函数属于函数表达式，但是未进行赋值操作，
 //所以javascript引擎将开头的function关键字当做函数声明，报错：要求需要一个函数名
  
