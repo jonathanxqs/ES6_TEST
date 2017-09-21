@@ -10,6 +10,11 @@ console.log("2π = " + math.sum(math.pi, math.pi))
 import { sum, pi } from "lib/math"
 console.log("2π = " + sum(pi, pi))
 
+/*
+Modules
+Default & Wildcard
+Marking a value as the default exported value and mass-mixin of values.
+*/
 
 //  lib/mathplusplus.js
 export * from "lib/math"
