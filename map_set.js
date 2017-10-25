@@ -20,6 +20,3 @@ wm.size === undefined
 var ws = new WeakSet();
 ws.add({ data: 42 });//因为添加到ws的这个临时对象没有其他变量引用它，所以ws不会保存它的值，也就是说这次添加其实没有意思
 
-
-/test2/din
-/test2/din
